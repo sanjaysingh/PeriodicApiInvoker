@@ -14,13 +14,8 @@ var options = minimist(process.argv.slice(2), knownOptions);
 
 gulp.task('default', function () {
 
-	var packagePaths = ['**', 
-					'!**/_package/**', 
-					'!**/typings/**',
-					'!typings', 
-					'!_package', 
-					'!gulpfile.js',
-					'!**/node_modules/**']
+	var packagePaths = ['host.json', 
+						'**/PeriodicApiInvoker/**']
 	
 	//add exclusion patterns for all dev dependencies
 	//var packageJSON = JSON.parse(fs.readFileSync(path.join(__dirname, 'package.json'), 'utf8'));
